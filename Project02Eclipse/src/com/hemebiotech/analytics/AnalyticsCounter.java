@@ -4,12 +4,24 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 
+import com.hemebiotech.analytics.data.read.ReadSymptomDataFromFile;
+
 public class AnalyticsCounter {
 	private static int headacheCount = 0;	// initialize to 0
 	private static int rashCount = 0;		// initialize to 0
 	private static int pupilCount = 0;		// initialize to 0
 	
 	public static void main(String args[]) throws Exception {
+		
+		//Jha => Adding ReadSymptomDataFromFile + test in same time
+		
+		System.out.println("Test de ReadSymptomDataFromFile () : ");
+		ReadSymptomDataFromFile reader1 = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
+		System.out.println(reader1.GetSymptoms());		
+		System.out.println("Nous revenons au programme initial :");
+		
+		//Jha => Return to initial program 
+		
 		// first get input
 		BufferedReader reader = new BufferedReader (new FileReader("Project02Eclipse/symptoms.txt"));
 		String line = reader.readLine();
