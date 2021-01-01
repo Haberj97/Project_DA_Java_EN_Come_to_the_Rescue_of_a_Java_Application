@@ -3,7 +3,9 @@ package com.hemebiotech.analytics;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.List;
 
+import com.hemebiotech.analytics.data.processing.CountSymptomDataFromFile;
 import com.hemebiotech.analytics.data.read.ReadSymptomDataFromFile;
 
 public class AnalyticsCounter {
@@ -17,9 +19,12 @@ public class AnalyticsCounter {
 		
 		System.out.println("Test de ReadSymptomDataFromFile () : ");
 		ReadSymptomDataFromFile reader1 = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");
-		System.out.println(reader1.GetSymptoms());		
-		System.out.println("Nous revenons au programme initial :");
 		
+		//Jha => Adding use of CountSymptomDataFromFile
+		CountSymptomDataFromFile counter1 = new CountSymptomDataFromFile(reader1.GetSymptoms());
+		System.out.println(counter1.sortSymptoms());
+		
+		System.out.println("Nous revenons au programme initial :");
 		//Jha => Return to initial program 
 		
 		// first get input
@@ -51,5 +56,10 @@ public class AnalyticsCounter {
 		writer.write("rash: " + rashCount + "\n");
 		writer.write("dialated pupils: " + pupilCount + "\n");
 		writer.close();
+	}
+
+	private static List<String> List(List<String> getSymptoms) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
