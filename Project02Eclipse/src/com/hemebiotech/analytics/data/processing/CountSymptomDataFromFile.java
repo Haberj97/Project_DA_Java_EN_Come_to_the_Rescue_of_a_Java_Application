@@ -2,16 +2,10 @@ package com.hemebiotech.analytics.data.processing;
 
 import java.util.List;
 import java.util.TreeMap;
-
-
-
 /**
- * @author jhabert
- *
- * Take a list and transform to TreeMap 
- *
+ *take list of all Symptoms obtained from a list of data
+ *@author jhabert
  */
-
 public class CountSymptomDataFromFile implements ISymptomCounter
 {
 	
@@ -19,9 +13,10 @@ public class CountSymptomDataFromFile implements ISymptomCounter
 	private List <String> symptomsRead ;
 	
 	/**
-	 * @author jhabert
-	 *
-	 *@param take list of all Symptoms obtained from a list of data
+	 *@param symptomsRead
+	 *take list of all Symptoms obtained from a list of data
+	 * 
+	 *@author jhabert
 	 */
 	
 	public CountSymptomDataFromFile(List <String> symptomsRead) 
@@ -31,7 +26,14 @@ public class CountSymptomDataFromFile implements ISymptomCounter
 		}
 	
 
-	@Override
+	
+	
+	/**
+	 *@return symptomsSorter "return an ordered list of symptoms "
+	 *@author jhabert
+	 *
+	 */
+	
 	public TreeMap<String, Integer> SortSymptoms() 
 		{
 			TreeMap<String , Integer>symptomsSorter=new TreeMap<String, Integer>();

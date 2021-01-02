@@ -6,10 +6,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * @author jhabert
- * 
  * Take a treemap and transform data to an external file 
- *
+ *@author jhabert
  */
 public class WriteSymptomDataToFile implements ISymptomWriter {
 
