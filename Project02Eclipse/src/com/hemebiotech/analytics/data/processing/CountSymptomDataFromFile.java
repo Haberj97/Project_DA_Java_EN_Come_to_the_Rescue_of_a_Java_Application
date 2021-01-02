@@ -32,7 +32,7 @@ public class CountSymptomDataFromFile implements ISymptomCounter
 	
 
 	@Override
-	public TreeMap<String, Integer> sortSymptoms() 
+	public TreeMap<String, Integer> SortSymptoms() 
 		{
 			TreeMap<String , Integer>symptomsSorter=new TreeMap<String, Integer>();
 			

@@ -26,5 +26,5 @@ public interface ISymptomCounter
  *
  */
 {
-	TreeMap<String , Integer> sortSymptoms ();
+	TreeMap<String , Integer> SortSymptoms();
 }
